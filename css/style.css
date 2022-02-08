@@ -722,6 +722,7 @@ img {
   background-color: var(--first-fon-color);
 }
 .modal-title {
+  margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -761,6 +762,16 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+  transition: outline var(--time-anime) var(--time-cube);
+}
+
+.modal-input:hover,
+.modal-input:focus {
+  outline: 1px solid var(--secondary-button-color);
+}
+.modal-input:hover + .icons-modal,
+.modal-input:focus + .icons-modal {
+  fill: var(--secondary-button-color);
 }
 .comment-area {
   padding: 11px 20px 11px 42px;
@@ -770,6 +781,7 @@ img {
   box-sizing: border-box;
   border-radius: 4px;
   resize: none;
+  transition: outline var(--time-anime) var(--time-cube);
 }
 ::-webkit-input-placeholder {
   color: rgba(117, 117, 117, 0.5);
@@ -784,6 +796,10 @@ img {
   color: rgba(117, 117, 117, 0.5);
 }
 
+.comment-area:hover,
+.comment-area:focus {
+  outline: 1px solid #2196f3;
+}
 .btn-modal {
   padding: 10px 55px;
   font-weight: 700;
@@ -806,47 +822,47 @@ img {
 .modal-form-input {
   position: relative;
   transition: fill var(--time-anime) var(--time-cube);
+  /* margin-bottom: 4px; */
 }
 .pos-btn-modal {
   display: flex;
   justify-content: center;
 }
 
+.modal-comment-box {
+  margin-bottom: 20px;
+}
 .contract-modal {
-  margin-top: 20px;
   margin-bottom: 26px;
 
   color: var(--first-color-text);
+}
+.modal-checkbox {
+  margin-bottom: 26px;
+}
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
 }
 .contract-link {
   color: var(--secondary-button-color);
 }
 
+.modal-input-name {
+  position: relative;
+  margin-bottom: 10px;
+}
+
 .icons-modal {
   position: absolute;
   left: 12px;
-  bottom: 0;
+  bottom: 11px;
   transition: fill var(--time-anime) var(--time-cube);
 }
 
 .close-block:hover,
 .close-block:focus {
   fill: var(--secondary-button-color);
-}
-
-.modal-form-input:hover .icons-modal,
-.modal-form-input:focus .icons-modal {
-  fill: var(--secondary-button-color);
-  border-color: var(--secondary-button-color);
-}
-
-.modal-input:hover,
-.modal-input:focus,
-.comment-area:hover,
-.comment-area:focus {
-  border-color: var(--secondary-button-color);
-}
-
-.modal-input:visited {
-  border-color: var(--secondary-button-color);
 }
