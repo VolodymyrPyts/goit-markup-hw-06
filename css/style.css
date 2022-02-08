@@ -545,7 +545,7 @@ img {
   color: #ffffff;
   background: var(--secondary-button-color);
 
-  border-color: transparent;
+  /* border-color: transparent; */
   border-radius: 4px;
   cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -814,7 +814,6 @@ img {
   color: #ffffff;
   background: var(--secondary-button-color);
 
-  border-color: transparent;
   border-radius: 4px;
   cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -838,6 +837,8 @@ img {
   color: var(--first-color-text);
 }
 .modal-checkbox {
+  display: flex;
+  justify-content: center;
   margin-bottom: 26px;
 }
 .checkbox {
@@ -846,6 +847,22 @@ img {
   appearance: none;
   position: relative;
 }
+
+.box-type {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--secondary-color-text);
+  border-radius: 4px;
+}
+
+.checkbox:checked + .box-type {
+  background-color: var(--secondary-button-color);
+  background-image: url(../images/icon-check.svg);
+  background-size: contain;
+  border: 2px solid var(--secondary-button-color);
+}
+
 .contract-link {
   color: var(--secondary-button-color);
 }
